@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ @font-face {
+    font-family: Arial;
+    src: url(/assets/font/fonts/arial.ttf);
+ }
 * {
     padding: 0;
     margin: 0;
@@ -10,13 +13,13 @@
 
  :root {
     /*========== Colors ==========*/
-    --main-color: #5B4BF5;
-    --second-color: #121314;
-    --black-color: #000000;
+    --main-color: #004382;
+    --second-color: #FD8B04;
+    --black-color: #616161;
     --title-color: #393939;
     --white-color: #ffffff;
     /*========== Font and typography ==========*/
-    --body-font: 'Inter', sans-serif;
+    --body-font: 'Arial', sans-serif;
     --sec-title-font: 25px;
     --p-font: 18px;
     --m-title: 30.25px;
@@ -56,7 +59,7 @@ html {
 }
 
 body {
-    color: var(--white-color);
+    color: var(--black-color);
     font-size: var(--p-font);
     font-weight: 400;
     background: var(--second-color);
