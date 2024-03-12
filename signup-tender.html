@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Tender</title>
+    <!-- =============font========== -->
+    <link rel="stylesheet" href="assets/font/icofont.min.css" />
+    <!-- ==================Bootstrap============ -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- ================default=============== -->
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <!-- =================style============ -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/signup-tender.css" />
+    <link rel="stylesheet" href="assets\css\login-tender.css">
+    <!-- ======================responsive============ -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css"
+      rel="stylesheet"
+      media="screen"
+    />
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="content-element">
+        <div class="container">
+          <div class="row justify-content-center">
+            
+              <div class="col-md-6">
+                <div class="form-background"> 
+                <form class="signup-form">
+                  <h2 class="signup-header">Sign Up</h2>
+
+                  <div class="mb-3">
+                    <label for="company-name" class="form-label"
+                      >Full Name/Company Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="company-name"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="username" class="form-label"
+                      >Username/ID:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label"
+                      >Email:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+                  <div class="mb-3 mobile-box-holder">
+                    <label for="phone" class="form-label">Mobile:</label>
+                    <div>
+                        <input type="tel" id="phone" class="mobile-box-holder" placeholder="Enter your mobile number" required>
+                    </div>
+                    <span id="valid-msg" class="hide">Valid</span>
+                    <span id="error-msg" class="hide">Invalid number</span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="password" class="form-label"
+                      >Password:</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="confirm-password" class="form-label"
+                      >Confirm Password:</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="confirm-password"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <!-- reCAPTCHA here -->
+                    <div class="g-recaptcha" data-sitekey="6LeM6JQpAAAAAKz1TXzqU07Y1gg6NftFy2bmuyc5"></div>
+                  </div>
+
+                 <button type="button" class="signup-button">SIGN UP</button>
+                 <p class="s-form-footer">Already have an account? <a href="login-tender.html">LOGIN HERE</a></p>
+                 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var telInput = $("#phone"),
+        errorMsg = $("#error-msg"),
+        validMsg = $("#valid-msg");
+
+      // initialise plugin
+      telInput.intlTelInput({
+        allowExtensions: true,
+        formatOnDisplay: true,
+        autoFormat: true,
+        autoHideDialCode: true,
+        autoPlaceholder: true,
+        defaultCountry: "auto",
+        ipinfoToken: "yolo",
+
+        nationalMode: false,
+        numberType: "MOBILE",
+        //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        preferredCountries: ["sa", "ae", "qa", "om", "bh", "kw", "ma"],
+        preventInvalidNumbers: true,
+        separateDialCode: true,
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+          $.get("http://ipinfo.io", function () {}, "jsonp").always(function (
+            resp
+          ) {
+            var countryCode = resp && resp.country ? resp.country : "";
+            callback(countryCode);
+          });
+        },
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js",
+      });
+
+      var reset = function () {
+        telInput.removeClass("error");
+        errorMsg.addClass("hide");
+        validMsg.addClass("hide");
+      };
+
+      // on blur: validate
+      telInput.blur(function () {
+        reset();
+        if ($.trim(telInput.val())) {
+          if (telInput.intlTelInput("isValidNumber")) {
+            validMsg.removeClass("hide");
+          } else {
+            telInput.addClass("error");
+            errorMsg.removeClass("hide");
+          }
+        }
+      });
+
+      // on keyup / change flag: reset
+      telInput.on("keyup change", reset);
+    </script>
+
+    <!-- ============script========= -->
+    <!-- =============jQuery========= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- ===============bootstrap=========== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- =============custom js========= -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

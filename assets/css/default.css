@@ -62,7 +62,6 @@ body {
     color: var(--black-color);
     font-size: var(--p-font);
     font-weight: 400;
-    background: var(--second-color);
     font-family: var(--body-font);
     line-height: var(--p-font-height);
     overflow-X: hidden;

@@ -1,0 +1,25 @@
+.log-in-form h2 {
+    text-align: center;
+  }
+.login-header{
+    color: #004382;
+    font-weight: bold;
+  }
+.forget-pass{
+    text-align: end;
+}  
+.forget-pass a{
+    color: #555;
+    text-decoration: underline;
+}
+.login-footer{
+    text-align: center;
+}
+.signup-button a{
+    color: #ffffff;
+
+}
+.form-label{
+    font-weight: bold;
+    font-size: 14px;
+}
