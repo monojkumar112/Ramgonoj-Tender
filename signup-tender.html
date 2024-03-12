@@ -32,9 +32,11 @@
           <div class="row justify-content-center">
             
               <div class="col-md-6">
-                <div class="form-background"> 
+                <h2 class="signup-header">Sign Up</h2> 
+                <div class="form-background">
+                
                 <form class="signup-form">
-                  <h2 class="signup-header">Sign Up</h2>
+                
 
                   <div class="mb-3">
                     <label for="company-name" class="form-label"
@@ -73,7 +75,7 @@
                   </div>
                   <div class="mb-3 mobile-box-holder">
                     <label for="phone" class="form-label">Mobile:</label>
-                    <div>
+                    <div class="form-input-fuild">
                         <input type="tel" id="phone" class="mobile-box-holder" placeholder="Enter your mobile number" required>
                     </div>
                     <span id="valid-msg" class="hide">Valid</span>
@@ -81,28 +83,22 @@
                   </div>
 
                   <div class="mb-3">
-                    <label for="password" class="form-label"
-                      >Password:</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="password"
-                      aria-describedby="emailHelp"
-                    />
+                    <label for="password" class="form-label">Password:</label>
+                    <div class="password-container">
+                        <input type="password" class="form-control" id="password" aria-describedby="emailHelp" />
+                        <span class="toggle-password" onclick="togglePasswordVisibility()"></span>
+                    </div>
                   </div>
+                
 
-                  <div class="mb-3">
-                    <label for="confirm-password" class="form-label"
-                      >Confirm Password:</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="confirm-password"
-                      aria-describedby="emailHelp"
-                    />
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label">Confirm Password:</label>
+                  <div class="confirm-password-container">
+                      <input type="password" class="form-control" id="confirm-password" aria-describedby="emailHelp" />
+                      <span class="toggle-confirm-password" onclick="toggleConfirmPasswordVisibility()"></span>
                   </div>
+              </div>
+              
                   <div class="mb-3">
                     <!-- reCAPTCHA here -->
                     <div class="g-recaptcha" data-sitekey="6LeM6JQpAAAAAKz1TXzqU07Y1gg6NftFy2bmuyc5"></div>

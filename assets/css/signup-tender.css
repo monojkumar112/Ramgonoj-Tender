@@ -1728,17 +1728,22 @@ button:hover {
 }
 
 .form-background {
-  background: #b5b5b5;
-  padding: 20px;
+  background:#F5F5F5;
+  padding: 30px 70px 30px 70px;
   border-radius: 10px;
 }
-
+@media (max-width: 530px) {
+  .form-background {
+      padding: 30px 50px 30px 50px;
+  }
+}
 form.signup-form h2 {
   text-align: center;
 }
 /* Default styles for larger screens */
 .mobile-box-holder {
   width: 100%; 
+  border-radius: 4px;
 }
 
 
@@ -1749,11 +1754,13 @@ form.signup-form h2 {
   font-weight: 700;
   padding: 5px 0 5px 0;
   border: none;
+  border-radius: 4px;
 }
 .signup-header{
   color: #004382;
   text-align: center;
   font-weight: bold;
+  padding: 20px 0 20px 0;
 }
 .s-form-footer{
   text-align: center;
@@ -1762,3 +1769,41 @@ form.signup-form h2 {
 .s-form-footer a{
   font-weight: bold;
 }
+.form-input-fuild{
+  width: 100%;
+}
+.form-input-fuild .intl-tel-input{
+  width: 100%;
+}
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url('../img/eye-icon.png') center/contain no-repeat;
+  background-color: #ffffff; 
+}
+
+.confirm-password-container {
+  position: relative;
+}
+
+.toggle-confirm-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url('../img/eye-icon.png') center/contain no-repeat;
+  background-color: #ffffff; 
+}
+
