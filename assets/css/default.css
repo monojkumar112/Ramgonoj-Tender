@@ -18,6 +18,8 @@
     --black-color: #616161;
     --title-color: #393939;
     --white-color: #ffffff;
+    --ash-color: #5C5E61;
+    --ash-color-2:#d9d9d9;
     /*========== Font and typography ==========*/
     --body-font: 'Arial', sans-serif;
     --sec-title-font: 25px;
@@ -62,7 +64,7 @@ body {
     color: var(--black-color);
     font-size: var(--p-font);
     font-weight: 400;
-    background: var(--second-color);
+    background: var(--white-color);
     font-family: var(--body-font);
     line-height: var(--p-font-height);
     overflow-X: hidden;
@@ -76,6 +78,7 @@ img {
 a {
     text-decoration: none;
     display: inline-block;
+    color: var(--white-color);
 }
 
 a:hover {
