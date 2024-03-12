@@ -172,71 +172,314 @@
         <div class="main-content">
           <div class="live-tender-wrapper">
             <h1 class="tender-title">Live Tender List</h1>
-            <div class="live-tender-search-bar">
-              <button class="search-btn">Search</button>
-              <input
-                type="text"
-                placeholder="like Tender number, Method, Date, Participation and Evaluation Type etc."
-              />
-            </div>
-            <div class="live-table-wrapper">
-              <h2 class="table-text-list">Tender Information List</h2>
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  <thead class="tender-table-header">
-                    <tr>
-                      <th scope="col">Tender No.</th>
-                      <th scope="col">Tender Title</th>
-                      <th scope="col">Publish Date</th>
-                      <th scope="col">Last Submission Date</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="tender-table-body">
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- Pagination -->
-              <div class="pagination">
-                <button class="prev">Previous</button>
-                <span class="page-numbers"></span>
-                <button class="next">Next</button>
-              </div>
+
+            <div class="live-table-wrapper mt-3">
+              <form action="">
+                <div class="tender-item-details-wrapper">
+                  <h2 class="table-text-list">
+                    Compliance - [ RFQ for Camera and SD Memory Card.
+                    [BPD/2024/RFQ-617] ]
+                  </h2>
+                  <div class="table-responsive">
+                    <table class="table participate-table table-hover">
+                      <thead class="tender-table-header">
+                        <tr>
+                          <th scope="col" class="particate-title-text">
+                            Requirement
+                          </th>
+                          <th scope="col">Comply*</th>
+                          <th scope="col">Comments</th>
+                          <th scope="col">Upload</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tender-table-body">
+                        <tr>
+                          <td>Product Catalogue</td>
+                          <td>
+                            <ul class="participate-checkbox">
+                              <li>
+                                <input type="radio" id="yes" />
+                                <label for="yes">Yes</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="no" />
+                                <label for="no">No</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="other" />
+                                <label for="other">Others</label>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control-item"
+                              type="text"
+                              placeholder="Enter comments (Max 250 characters)"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="upload-img">
+                              <input type="file" />
+                              <img
+                                src="/assets/images/icons/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            At least 2 years relevant experience on similar
+                            Field
+                          </td>
+                          <td>
+                            <ul class="participate-checkbox">
+                              <li>
+                                <input type="radio" id="yes" />
+                                <label for="yes">Yes</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="no" />
+                                <label for="no">No</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="other" />
+                                <label for="other">Others</label>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control-item"
+                              type="text"
+                              placeholder="Enter comments (Max 250 characters)"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="upload-img">
+                              <input type="file" />
+                              <img
+                                src="/assets/images/icons/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tender-item-details-wrapper mt-3">
+                  <h2 class="table-text-list">
+                    Required Document List - [ RFQ for 1.2 KW Solar System
+                    [BPD/2024/RFQ-620] ]
+                  </h2>
+                  <div class="table-responsive">
+                    <table class="table participate-table table-hover">
+                      <thead class="tender-table-header">
+                        <tr>
+                          <th scope="col" class="particate-title-text w-25">
+                            Document Title
+                          </th>
+                          <th scope="col">Mandatory</th>
+                          <th scope="col">Comments</th>
+                          <th scope="col">Upload</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tender-table-body">
+                        <tr>
+                          <td>Copy of Trade license / Equivalent Document</td>
+                          <td>
+                            <ul class="participate-checkbox">
+                              <li>
+                                <input type="radio" id="yes" />
+                                <label for="yes">Yes</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="no" />
+                                <label for="no">No</label>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control-item"
+                              type="text"
+                              placeholder="Enter comments (Max 250 characters)"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="upload-img">
+                              <input type="file" />
+                              <img
+                                src="/assets/images/icons/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Up to date copy of Tax Payment receipt / Equivalent
+                            Document for international vendor
+                          </td>
+                          <td>
+                            <ul class="participate-checkbox">
+                              <li>
+                                <input type="radio" id="yes" />
+                                <label for="yes">Yes</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="no" />
+                                <label for="no">No</label>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control-item"
+                              type="text"
+                              placeholder="Enter comments (Max 250 characters)"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="upload-img">
+                              <input type="file" />
+                              <img
+                                src="/assets/images/icons/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>TIN Certificate</td>
+                          <td></td>
+                          <td>
+                            <input
+                              class="form-control-item"
+                              type="text"
+                              placeholder="Enter comments (Max 250 characters)"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="upload-img">
+                              <input type="file" />
+                              <img
+                                src="/assets/images/icons/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>BIN Certificate</td>
+                          <td>
+                            <ul class="participate-checkbox">
+                              <li>
+                                <input type="radio" id="yes" />
+                                <label for="yes">Yes</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="no" />
+                                <label for="no">No</label>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control-item"
+                              type="text"
+                              placeholder="Enter comments (Max 250 characters)"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="upload-img">
+                              <input type="file" />
+                              <img
+                                src="/assets/images/icons/upload.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="participate-btn">
+                  <button class="custom-btn mt-3">Save & Next</button>
+                  <button class="custom-btn tender-close-btn mt-3">
+                    Close
+                  </button>
+                </div>
+                <div class="tender-item-details-wrapper mt-3">
+                  <h2 class="table-text-list">
+                    Tender Item List - [ RFQ for the Medical Equipment.
+                    [BPD/2024/RFQ-626] ]
+                  </h2>
+                  <div class="table-responsive">
+                    <table class="table participate-table table-hover">
+                      <thead class="tender-table-header">
+                        <tr>
+                          <th scope="col">Sl.</th>
+                          <th scope="col">Select</th>
+                          <th scope="col">Lot/Group</th>
+                          <th scope="col">Item Name</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Delivery Schedule</th>
+                          <th scope="col">Technical Information</th>
+                          <th scope="col">Financial Information</th>
+                          <th scope="col">Offer Price</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tender-table-body">
+                        <tr>
+                          <td>01</td>
+                          <td>
+                            <input type="checkbox">
+                          </td>
+                          <td>
+                            Lot-1
+                          </td>
+
+                          <td>
+                           
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                           
+                          </td>
+                          <td>
+                           
+                          </td>
+                        </tr>
+                      
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -253,6 +496,5 @@
     <!-- =============custom js========= -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
-
   </body>
 </html>
