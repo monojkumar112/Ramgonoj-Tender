@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supplier Dashboard</title>
+
+    <link rel="stylesheet" href="/assets/css/elham.css" />
+    <!-- =============font========== -->
+    <link rel="stylesheet" href="/assets/font/icofont.min.css" />
+    <!-- ==================Bootstrap============ -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!-- ================default=============== -->
+    <link rel="stylesheet" href="/assets/css/default.css" />
+    <!-- =================style============ -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- ======================responsive============ -->
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <section class="supplier-dashboard">
+      <div class="container">
+        <div class="sd-interface">
+          <!-- Supplier Dashboard -->
+          <div class="title-wrapper">
+            <h3 class="i-name">Supplier Dashboard</h3>
+          </div>
+          <div class="sd-boxes">
+            <div class="row">
+              <!-- LIVE TENDER -->
+              <div class="col-md-3">
+                <div class="sd-box">
+                  <div class="sd-box-icons">
+                    <img src="/assets/sd-images/Frame.png" alt="" />
+                  </div>
+                  <div class="sd-box-text">
+                    <p>LIVE TENDER</p>
+                  </div>
+                  <div class="sd-box-values">
+                    <p>12</p>
+                  </div>
+                </div>
+              </div>
+              <!-- CLOSING TODAY -->
+              <div class="col-md-3">
+                <div class="sd-box">
+                  <div class="sd-box-icons">
+                    <img src="/assets/sd-images/Frame(1).png" alt="" />
+                  </div>
+                  <div class="sd-box-text">
+                    <p>CLOSING TODAY</p>
+                  </div>
+                  <div class="sd-box-values">
+                    <p>12</p>
+                  </div>
+                </div>
+              </div>
+              <!-- TENDER NOTICE -->
+              <div class="col-md-3">
+                <div class="sd-box">
+                  <div class="sd-box-icons">
+                    <img src="/assets/sd-images/clarity_new-solid.png" alt="" />
+                  </div>
+                  <div class="sd-box-text">
+                    <p>TENDER NOTICE</p>
+                  </div>
+                  <div class="sd-box-values">
+                    <p>12</p>
+                  </div>
+                </div>
+              </div>
+              <!-- AWARD TENDER -->
+              <div class="col-md-3">
+                <div class="sd-box">
+                  <div class="sd-box-icons">
+                    <img
+                      src="/assets/sd-images/material-symbols-light_award-star-outline-rounded.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="sd-box-text">
+                    <p>AWARD TENDER</p>
+                  </div>
+                  <div class="sd-box-values">
+                    <p>12</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="title-wrapper">
+            <h3 class="i-name">Tender Process</h3>
+          </div>
+          <div class="selection-bar">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="tender-tab-li">
+                <a
+                  class="tender-tab active"
+                  id="featured-tender-tab"
+                  data-toggle="tab"
+                  href="#featured-tender"
+                  role="tab"
+                  aria-controls="featured-tender"
+                  aria-selected="true"
+                >
+                  <div class="sd-nav">Featured Tender / EOI</div>
+                </a>
+              </li>
+              <li class="tender-tab-li">
+                <a
+                  class="tender-tab"
+                  id="participated-tender-tab"
+                  data-toggle="tab"
+                  href="#participated-tender"
+                  role="tab"
+                  aria-controls="participated-tender"
+                  aria-selected="false"
+                >
+                  <div class="sd-nav">Participated Tender</div>
+                </a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="featured-tender"
+                role="tabpanel"
+                aria-labelledby="featured-tender-tab"
+              >
+                <h1>Featured Tender / EOI</h1>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="participated-tender"
+                role="tabpanel"
+                aria-labelledby="participated-tender-tab"
+              >
+                <h1>Participated Tender</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============script========= -->
+    <!-- =============jQuery========= -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <!-- ===============bootstrap=========== -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- =============custom js========= -->
+    <script src="/assets/js/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
