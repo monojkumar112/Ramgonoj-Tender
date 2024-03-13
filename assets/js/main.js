@@ -65,3 +65,5 @@ document.querySelector('.next').addEventListener('click', function() {
         displayPage(currentPage);
     }
 });
+
+

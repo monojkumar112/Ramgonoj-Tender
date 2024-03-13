@@ -1,3 +1,40 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var mySwiper = new Swiper(".swiper-container", {
+    // Optional parameters
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    // If you have navigation buttons
+    navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+    },
+  });
+});
+
 
 var telInput = $("#phone"),
   errorMsg = $("#error-msg"),
@@ -5,7 +42,6 @@ var telInput = $("#phone"),
 
 // initialise plugin
 telInput.intlTelInput({
-
   allowExtensions: true,
   formatOnDisplay: true,
   autoFormat: true,
@@ -17,27 +53,28 @@ telInput.intlTelInput({
   nationalMode: false,
   numberType: "MOBILE",
   //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-  preferredCountries: ['sa', 'ae', 'qa','om','bh','kw','ma'],
+  preferredCountries: ["sa", "ae", "qa", "om", "bh", "kw", "ma"],
   preventInvalidNumbers: true,
   separateDialCode: true,
   initialCountry: "auto",
-  geoIpLookup: function(callback) {
-  $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-    var countryCode = (resp && resp.country) ? resp.country : "";
-    callback(countryCode);
-  });
-},
-   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
+  geoIpLookup: function (callback) {
+    $.get("http://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+      var countryCode = resp && resp.country ? resp.country : "";
+      callback(countryCode);
+    });
+  },
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js",
 });
 
-var reset = function() {
+var reset = function () {
   telInput.removeClass("error");
   errorMsg.addClass("hide");
   validMsg.addClass("hide");
 };
 
 // on blur: validate
-telInput.blur(function() {
+telInput.blur(function () {
   reset();
   if ($.trim(telInput.val())) {
     if (telInput.intlTelInput("isValidNumber")) {
@@ -52,14 +89,13 @@ telInput.blur(function() {
 // on keyup / change flag: reset
 telInput.on("keyup change", reset);
 
-
 function togglePasswordVisibility() {
   var passwordInput = document.getElementById("password");
 
   if (passwordInput.type === "password") {
-      passwordInput.type = "text";
+    passwordInput.type = "text";
   } else {
-      passwordInput.type = "password";
+    passwordInput.type = "password";
   }
 }
 
@@ -67,8 +103,8 @@ function toggleConfirmPasswordVisibility() {
   var confirmPasswordInput = document.getElementById("confirm-password");
 
   if (confirmPasswordInput.type === "password") {
-      confirmPasswordInput.type = "text";
+    confirmPasswordInput.type = "text";
   } else {
-      confirmPasswordInput.type = "password";
+    confirmPasswordInput.type = "password";
   }
 }

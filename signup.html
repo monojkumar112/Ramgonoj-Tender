@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Tender</title>
+    <title>Gaming HTML Template</title>
     <!-- =============font========== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/font/icofont.min.css" />
     <!-- ==================Bootstrap============ -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -13,31 +17,50 @@
     <link rel="stylesheet" href="assets/css/default.css" />
     <!-- =================style============ -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/signup-tender.css" />
-    <link rel="stylesheet" href="assets\css\login-tender.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+    <link rel="stylesheet" href="assets/css/signup.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
     <!-- ======================responsive============ -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css"
-      rel="stylesheet"
-      media="screen"
-    />
   </head>
 
   <body>
-    <div class="content">
+    <!-- ======================Navbar section start from here============ -->
+
+    <header class="home-header">
+      <div class="container">
+        <div class="navbar-wrapper">
+          <div class="navbar-content">
+            <div class="navbar-leftside">
+              <div class="nav-logo">
+                <a href="index.html">
+                  <img
+                    src="assets/home-image/logo-group.png"
+                    alt="Ramgong_eTender"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="navbar-rightside">
+              <ul>
+                <li><a href="/signup.html">Sign Up</a></li>
+                <li><a href="/login.html">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ======================Navbar section ends here============ -->
+
+    <div class="content mb-5">
       <div class="content-element">
         <div class="container">
           <div class="row justify-content-center">
-            
-              <div class="col-md-6">
-                <h2 class="signup-header">Sign Up</h2> 
-                <div class="form-background">
-                
+            <div class="col-md-6">
+              <h2 class="signup-header">Sign Up</h2>
+              <div class="form-background">
                 <form class="signup-form">
-                
-
                   <div class="mb-3">
                     <label for="company-name" class="form-label"
                       >Full Name/Company Name:</label
@@ -63,9 +86,7 @@
                   </div>
 
                   <div class="mb-3">
-                    <label for="email" class="form-label"
-                      >Email:</label
-                    >
+                    <label for="email" class="form-label">Email:</label>
                     <input
                       type="email"
                       class="form-control"
@@ -73,10 +94,16 @@
                       aria-describedby="emailHelp"
                     />
                   </div>
-                  <div class="mb-3 mobile-box-holder">
+                  <div class="mb-3 mobile-box-holder-con">
                     <label for="phone" class="form-label">Mobile:</label>
                     <div class="form-input-fuild">
-                        <input type="tel" id="phone" class="mobile-box-holder" placeholder="Enter your mobile number" required>
+                      <input
+                        type="tel"
+                        id="phone"
+                        class="mobile-box-holder"
+                        placeholder="Enter your mobile number"
+                        required
+                      />
                     </div>
                     <span id="valid-msg" class="hide">Valid</span>
                     <span id="error-msg" class="hide">Invalid number</span>
@@ -85,28 +112,52 @@
                   <div class="mb-3">
                     <label for="password" class="form-label">Password:</label>
                     <div class="password-container">
-                        <input type="password" class="form-control" id="password" aria-describedby="emailHelp" />
-                        <span class="toggle-password" onclick="togglePasswordVisibility()"></span>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        aria-describedby="emailHelp"
+                      />
+                      <span
+                        class="toggle-password"
+                        onclick="togglePasswordVisibility()"
+                      ></span>
                     </div>
                   </div>
-                
 
-                <div class="mb-3">
-                  <label for="confirm-password" class="form-label">Confirm Password:</label>
-                  <div class="confirm-password-container">
-                      <input type="password" class="form-control" id="confirm-password" aria-describedby="emailHelp" />
-                      <span class="toggle-confirm-password" onclick="toggleConfirmPasswordVisibility()"></span>
+                  <div class="mb-3">
+                    <label for="confirm-password" class="form-label"
+                      >Confirm Password:</label
+                    >
+                    <div class="confirm-password-container">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirm-password"
+                        aria-describedby="emailHelp"
+                      />
+                      <span
+                        class="toggle-confirm-password"
+                        onclick="toggleConfirmPasswordVisibility()"
+                      ></span>
+                    </div>
                   </div>
-              </div>
-              
+
                   <div class="mb-3">
                     <!-- reCAPTCHA here -->
-                    <div class="g-recaptcha" data-sitekey="6LeM6JQpAAAAAKz1TXzqU07Y1gg6NftFy2bmuyc5"></div>
+                    <div
+                      class="g-recaptcha"
+                      data-sitekey="6LeM6JQpAAAAAKz1TXzqU07Y1gg6NftFy2bmuyc5"
+                    ></div>
                   </div>
 
-                 <button type="button" class="signup-button">SIGN UP</button>
-                 <p class="s-form-footer">Already have an account? <a href="login-tender.html">LOGIN HERE</a></p>
-                 
+                  <button type="button" class="w-100 custom-btn">
+                    SIGN UP
+                  </button>
+                  <p class="s-form-footer mt-2">
+                    Already have an account?
+                    <a href="login-tender.html">LOGIN HERE</a>
+                  </p>
                 </form>
               </div>
             </div>
@@ -114,7 +165,18 @@
         </div>
       </div>
     </div>
+<!-- ======================copywrite section starts here============ -->
 
+<footer class="home-footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>কপিরাইট &copy; ২০২৪ সর্বস্বত্ব সংরক্ষিত গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</p>
+    </div>
+  </div>
+
+</footer>
+<!-- =========================================================== -->
+<!-- ======================copywrite section ends here============ -->
     <script>
       var telInput = $("#phone"),
         errorMsg = $("#error-msg"),

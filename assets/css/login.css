@@ -5,7 +5,7 @@
     color: #004382;
     font-weight: bold;
     text-align: center;
-    padding: 20px 0 20px 0;
+    padding: 30px 0 40px 0;
   }
 .forget-pass{
     text-align: end;
@@ -24,8 +24,8 @@
 
 }
 .form-label{
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
 }
 .form-input-fuild{
     width: 100%;

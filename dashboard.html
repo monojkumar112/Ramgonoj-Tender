@@ -2,26 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Gaming HTML Template</title>
     <!-- =============font========== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/font/icofont.min.css" />
     <!-- ==================Bootstrap============ -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <!-- ==================DataTables CSS============ -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css"
-    />
     <!-- ================default=============== -->
     <link rel="stylesheet" href="assets/css/default.css" />
     <!-- =================style============ -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/signup.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
     <link rel="stylesheet" href="assets/css/dashboard.css" />
     <!-- ======================responsive============ -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
+
   <body>
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -78,7 +81,7 @@
             </div>
             <ul class="sidebar-list" id="side-menu">
               <li>
-                <a href="" class="d-flex align-items-center gap-2">
+                <a href="/dashboard.html" class="d-flex align-items-center gap-2">
                   <svg
                     width="36"
                     height="36"
@@ -99,7 +102,7 @@
                 </a>
               </li>
               <li>
-                <a href="" class="d-flex align-items-center gap-2">
+                <a href="/tender-participation.html" class="d-flex align-items-center gap-2">
                   <svg
                     width="36"
                     height="36"
@@ -117,31 +120,7 @@
                 </a>
               </li>
               <li>
-                <a href="" class="d-flex align-items-center gap-2">
-                  <svg
-                    width="36"
-                    height="36"
-                    viewBox="0 0 36 36"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_2894_240)">
-                      <path
-                        d="M34.3545 17.592L27.5625 15.0465V7.41749C27.5617 6.902 27.4038 6.39899 27.1098 5.97555C26.8158 5.55212 26.3997 5.22837 25.917 5.04749L18.8865 2.41199C18.3135 2.19405 17.6805 2.19405 17.1075 2.41199L10.0755 5.04899C9.59242 5.22933 9.17597 5.55294 8.88189 5.9765C8.58781 6.40006 8.43014 6.90335 8.43 7.41899V15.0465L1.638 17.592C1.15669 17.7741 0.742188 18.0983 0.449603 18.5217C0.157018 18.945 0.000201946 19.4474 0 19.962L0 27.702C0 28.659 0.54 29.538 1.3995 29.967L8.43 33.483C8.78135 33.6597 9.1692 33.7518 9.5625 33.7518C9.9558 33.7518 10.3436 33.6597 10.695 33.483L18 29.826L25.305 33.483C25.6564 33.6597 26.0442 33.7518 26.4375 33.7518C26.8308 33.7518 27.2186 33.6597 27.57 33.483L34.6005 29.967C35.0209 29.7564 35.3744 29.433 35.6215 29.033C35.8687 28.633 35.9997 28.1722 36 27.702V19.962C36 18.9075 35.346 17.9655 34.3545 17.592ZM25.1715 15.102L19.1955 17.346V12.5505L25.1715 9.94949V15.102ZM10.83 7.31999L18 4.63499L25.1715 7.31999V7.36199L18 10.272L10.8285 7.36199L10.83 7.31999ZM16.7355 27.7875L10.7595 30.7755V25.215L16.7355 22.488V27.7875ZM16.7355 19.9125L9.564 22.8225L2.3925 19.9125V19.8705L9.564 17.1855L16.7355 19.8705V19.9125ZM33.6105 27.7875L27.6345 30.7755V25.215L33.6105 22.488V27.7875ZM33.6105 19.9125L26.439 22.8225L19.2675 19.9125V19.8705L26.439 17.1855L33.6105 19.8705V19.9125Z"
-                        fill="#7D7D7D"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_2894_240">
-                        <rect width="36" height="36" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <span key="t-dashboards">Supplier Management</span>
-                </a>
-              </li>
-              <li>
-                <a href="" class="d-flex align-items-center gap-2">
+                <a href="/user-mangement.html" class="d-flex align-items-center gap-2">
                   <svg
                     width="36"
                     height="36"
@@ -170,75 +149,498 @@
         </div>
 
         <div class="main-content">
-          <div class="live-tender-wrapper">
-            <h1 class="tender-title">Live Tender List</h1>
-            <div class="live-tender-search-bar">
-              <button class="search-btn">Search</button>
-              <input
-                type="text"
-                placeholder="like Tender number, Method, Date, Participation and Evaluation Type etc."
-              />
-            </div>
-            <div class="live-table-wrapper">
-              <h2 class="table-text-list">Tender Information List</h2>
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  <thead class="tender-table-header">
-                    <tr>
-                      <th scope="col">Tender No.</th>
-                      <th scope="col">Tender Title</th>
-                      <th scope="col">Publish Date</th>
-                      <th scope="col">Last Submission Date</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="tender-table-body">
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                    <tr>
-                      <td>BPD/2024/RFQ-537</td>
-                      <td>RFQ for the supply of Brick and Bricks Chips</td>
-                      <td>05/03/2024</td>
-                      <td>15/03/2024</td>
-                      <td>Published</td>
-                    </tr>
-                  </tbody>
-                </table>
+          <section class="supplier-dashboard">
+            <div class="sd-interface">
+              <!-- Supplier Dashboard -->
+              <div class="title-wrapper">
+                <h3 class="i-name">Supplier Dashboard</h3>
               </div>
-              <!-- Pagination -->
-              <div class="pagination">
-                <button class="prev">Previous</button>
-                <span class="page-numbers"></span>
-                <button class="next">Next</button>
+              <div class="sd-boxes">
+                <div class="row">
+                  <!-- LIVE TENDER -->
+                  <div class="col-md-3">
+                    <div class="sd-box">
+                      <div class="sd-box-icons">
+                        <img src="/assets/sd-images/Frame.png" alt="" />
+                      </div>
+                      <div class="sd-box-text">
+                        <p>LIVE TENDER</p>
+                      </div>
+                      <div class="sd-box-values">
+                        <p>12</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- CLOSING TODAY -->
+                  <div class="col-md-3">
+                    <div class="sd-box">
+                      <div class="sd-box-icons">
+                        <img src="/assets/sd-images/Frame(1).png" alt="" />
+                      </div>
+                      <div class="sd-box-text">
+                        <p>CLOSING TODAY</p>
+                      </div>
+                      <div class="sd-box-values">
+                        <p>12</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TENDER NOTICE -->
+                  <div class="col-md-3">
+                    <div class="sd-box">
+                      <div class="sd-box-icons">
+                        <img
+                          src="/assets/sd-images/clarity_new-solid.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="sd-box-text">
+                        <p>TENDER NOTICE</p>
+                      </div>
+                      <div class="sd-box-values">
+                        <p>12</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- AWARD TENDER -->
+                  <div class="col-md-3">
+                    <div class="sd-box">
+                      <div class="sd-box-icons">
+                        <img
+                          src="/assets/sd-images/material-symbols-light_award-star-outline-rounded.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="sd-box-text">
+                        <p>AWARD TENDER</p>
+                      </div>
+                      <div class="sd-box-values">
+                        <p>12</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="title-wrapper">
+                <h3 class="i-name">Tender Process</h3>
+              </div>
+              <div class="selection-bar">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="tender-tab-li">
+                    <a
+                      class="tender-tab active"
+                      id="featured-tender-tab"
+                      data-toggle="tab"
+                      href="#featured-tender"
+                      role="tab"
+                      aria-controls="featured-tender"
+                      aria-selected="true"
+                    >
+                      <div class="sd-nav">Featured Tender / EOI</div>
+                    </a>
+                  </li>
+                  <li class="tender-tab-li">
+                    <a
+                      class="tender-tab"
+                      id="participated-tender-tab"
+                      data-toggle="tab"
+                      href="#participated-tender"
+                      role="tab"
+                      aria-controls="participated-tender"
+                      aria-selected="false"
+                    >
+                      <div class="sd-nav">Participated Tender</div>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="featured-tender"
+                    role="tabpanel"
+                    aria-labelledby="featured-tender-tab"
+                  >
+                    <div class="featured-tenders-section-wrapper">
+                      <div class="featured-tenders-section-content">
+                        <div
+                          class="featured-tenders-header d-flex align-items-center justify-content-between"
+                        >
+                          <h3>Featured Tenders</h3>
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="view-more">View More</p>
+                            <div class="d-flex align-items-center gap-2">
+                              <div class="button-prev">
+                                <img
+                                  src="/assets/home-image/left-arrow.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="button-next">
+                                <img
+                                  src="/assets/home-image/right-arrow.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="featured-tenders-swiper">
+                          <div class="swiper-container swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <!-- Add more slides as needed -->
+                            </div>
+                            <!-- Add navigation buttons -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="participated-tender"
+                    role="tabpanel"
+                    aria-labelledby="participated-tender-tab"
+                  >
+                     <div class="featured-tenders-section-wrapper">
+                      <div class="featured-tenders-section-content">
+                        <div
+                          class="featured-tenders-header d-flex align-items-center justify-content-between"
+                        >
+                          <h3>Featured Tenders</h3>
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="view-more">View More</p>
+                            <div class="d-flex align-items-center gap-2">
+                              <div class="button-prev">
+                                <img
+                                  src="/assets/home-image/left-arrow.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="button-next">
+                                <img
+                                  src="/assets/home-image/right-arrow.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="featured-tenders-swiper">
+                          <div class="swiper-container swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-content-featured-tenders">
+                                  <p class="swipper-head-text">
+                                    RFQ for Printer (Specifications Attached)
+                                  </p>
+                                  <div class="counting-part">
+                                    <span>5Days: 23Hrs: 2Mins</span>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <span>Ref No:</span>
+                                      <p>BPD/2024/RFQ-528</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Opening Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Last Submission:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                    <div class="col-6">
+                                      <span>Closing Date:</span>
+                                      <p>07/03/2024 03:00 PM</p>
+                                    </div>
+                                  </div>
+                                  <a href="">read more</a>
+                                </div>
+                              </div>
+                              <!-- Add more slides as needed -->
+                            </div>
+                            <!-- Add navigation buttons -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
@@ -246,13 +648,14 @@
     <!-- ============script========= -->
     <!-- =============jQuery========= -->
     <script src="assets/js/jquery.min.js"></script>
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- ===============bootstrap=========== -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- =============custom js========= -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>

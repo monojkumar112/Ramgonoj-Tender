@@ -1,12 +1,16 @@
 @media only screen and (max-width: 992px) {
     .main-content {
     padding: 30px 15px;
+    width: 100%;
 }
 .live-table-wrapper {
     padding: 30px 20px 30px 20px;
 }
 .tender-title {
     font-size: 22px;
+}
+.table td, .table th{
+    white-space: nowrap;
 }
 
 }
