@@ -55,8 +55,9 @@
 
 /* ================================================== */
 /*============= Hero section css =====================*/
-
-/* header css */
+section.hero-section {
+    margin-top: 50px;
+}
 .hero-header h1{
  color:var(--main-color);
  line-height: 140%;
@@ -71,8 +72,6 @@
     display: flex;
     height: 100%;
 }
-
-/* hero left side(button) css */
 .hero-content ul li {
     margin-bottom: 35px;
     margin-right: 40px;
@@ -81,7 +80,6 @@
     justify-content: center;
     
   }
-  /* hero left side(button) css */
   .hero-custom-btn {
     display: flex;
     width: 100%;
@@ -100,7 +98,6 @@
     line-height: 150%;
     align-items: center;
     gap: 30px;
-    /* height: 100%; */
   }
   
   .hero-custom-btn:hover {
@@ -108,29 +105,19 @@
   }
   
   .hero-custom-btn img {
-    /* vertical-align: middle; */
-    /* margin-right: 10px; */
-    /* max-height: 30px; */
     width: 50px;
-    /* height: 50px; */
   }
-  
-  /* hero right side(text) css */
   .hero-text {
     color: var(--ash-color);
     font-size: 14px;
     line-height: 150%;
-    /* flex-grow: 1; */
   }
-  
   .hero-text p {
     padding-bottom: 10px;
   }
-  
   .hero-text a {
     color: var(--ash-color);
   }
-  
   .hero-text a:hover {
     color: var(--second-color);
   }
@@ -138,14 +125,13 @@
     width: 40px;
     height: 40px;
 }
-
 .live-logo-img img {
     width: 100%;
 }
   /* ================================================== */
 /*============= Slider section css =====================*/
 .featured-tenders-section{
-    margin: 30px 0;
+    margin: 30px 0 50px 0;
 }
 .featured-tenders-header h3{
     margin:20px 0;
@@ -177,13 +163,12 @@
     position: absolute;
     top: 0px;
     right:0px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
 }
 .swiper-content-featured-tenders a {
     background-color: var(--second-color);
     text-decoration: none;
-    /* border: 1px solid var(--white-color); */
     padding: 6px 20px;
     border-radius: 40px;
     color: var(--white-color);
@@ -195,13 +180,15 @@
 
   /* ================================================== */
 /*============= Footer section css =====================*/
+
 .home-footer{
     border-top: 1px solid var(--ash-color-2);
+    margin-top: 22px;
 }
 .footer-content{
     display:flex;
     justify-content: center;
-    padding: 20px 0 40px 0;
+    padding: 20px 0 30px 0;
     font-size: 12px;
 }
 

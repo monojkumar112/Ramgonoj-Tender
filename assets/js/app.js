@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 var telInput = $("#phone"),
   errorMsg = $("#error-msg"),
   validMsg = $("#valid-msg");

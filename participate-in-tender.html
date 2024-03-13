@@ -100,11 +100,11 @@
             <div class="sidebar-close-menu">
               <img src="/assets/images/icons/close.svg" alt="" />
             </div>
-            <ul class="sidebar-list" id="side-menu">
-              <li>
+           <ul class="sidebar-list" id="side-menu">
+              <li class="sidebar-link">
                 <a
                   href="/dashboard.html"
-                  class="d-flex align-items-center gap-2"
+                  class=" d-flex align-items-center gap-2"
                 >
                   <svg
                     width="36"
@@ -125,7 +125,7 @@
                   <span key="t-dashboards">Dashboards</span>
                 </a>
               </li>
-              <li>
+              <li class="sidebar-link">
                 <a
                   href="/tender-participation.html"
                   class="d-flex align-items-center gap-2"
@@ -146,10 +146,10 @@
                   <span key="t-dashboards">Tender Participation</span>
                 </a>
               </li>
-              <li>
+              <li class="sidebar-link">
                 <a
                   href="/user-mangement.html"
-                  class="d-flex align-items-center gap-2"
+                  class="d-flex  align-items-center gap-2"
                 >
                   <svg
                     width="36"
@@ -708,47 +708,86 @@
                     role="tabpanel"
                     aria-labelledby="submit-offer-tab"
                   >
-                    <div class="tender-item-details-wrapper mt-3">
-                      <h2 class="table-text-list">
-                        Tender Item List - [ RFQ for the Medical Equipment.
-                        [BPD/2024/RFQ-626] ]
-                      </h2>
-                      <div class="table-responsive">
-                        <table class="table participate-table table-hover">
-                          <thead class="tender-table-header">
-                            <tr>
-                              <th scope="col">Sl.</th>
-                              <th scope="col">Select</th>
-                              <th scope="col">Lot/Group</th>
-                              <th scope="col">Item Name</th>
-                              <th scope="col">Quantity</th>
-                              <th scope="col">Delivery Schedule</th>
-                              <th scope="col">Technical Information</th>
-                              <th scope="col">Financial Information</th>
-                              <th scope="col">Offer Price</th>
-                              <th scope="col">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody class="tender-table-body">
-                            <tr>
-                              <td>01</td>
-                              <td>
-                                <input type="checkbox" />
-                              </td>
-                              <td>Lot-1</td>
+                    <form action="">
+                      <div class="tender-item-details-wrapper mt-3">
+                        <h2 class="table-text-list">
+                          Tender Item List - [ RFQ for the Medical Equipment.
+                          [BPD/2024/RFQ-626] ]
+                        </h2>
+                        <div class="table-responsive">
+                          <table class="table participate-table table-hover">
+                            <thead class="tender-table-header">
+                              <tr>
+                                <th scope="col">Sl.</th>
+                                <th scope="col">Select</th>
+                                <th scope="col">Lot/Group</th>
+                                <th scope="col">Item Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Delivery Schedule</th>
+                                <th scope="col">Technical Information</th>
+                                <th scope="col">Financial Information</th>
+                                <th scope="col">Offer Price</th>
+                                <th scope="col">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody class="tender-table-body">
+                              <tr>
+                                <td>01</td>
+                                <td>
+                                  <input type="checkbox" />
+                                </td>
+                                <td>Lot-1</td>
 
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                          </tbody>
-                        </table>
+                                <td>Lancet</td>
+                                <td>710.00</td>
+                                <td>
+                                  <a href="#" class="show-color-text">
+                                    Show Details
+                                  </a>
+                                </td>
+                                <td>
+                                  <div class="upload-img custom-btn">
+                                    <input type="file" />
+                                    <img
+                                      src="/assets/images/icons/file.svg"
+                                      alt=""
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="upload-img custom-btn">
+                                    <img
+                                      src="/assets/images/icons/tk-icon.svg"
+                                      alt=""
+                                    />
+                                  </div>
+                                </td>
+                                <td>0.00</td>
+                                <td>Not Applied</td>
+                              </tr>
+                              <tr>
+                                <td colspan="7"></td>
+                                <!-- Use colspan to merge cells -->
+                                <td>Total</td>
+                                <td>0.00</td>
+                                <td>Not Applied</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="form-input-field mt-2">
+                          <label for="">Comments</label>
+                          <textarea name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="participate-btn">
+                          <button class="custom-btn mt-4 btn-main-color">
+                            Save
+                          </button>
+                          <button class="custom-btn mt-4">Submit</button>
+                          <button class="custom-btn tender-close-btn mt-4">Close</button>
+                        </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -757,6 +796,31 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarLinks = document.querySelectorAll(".sidebar-link a");
+        const setActiveLink = () => {
+          const currentPath = window.location.pathname;
+          sidebarLinks.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+            if (currentPath === linkPath) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        };
+        setActiveLink();
+        sidebarLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            sidebarLinks.forEach((link) => {
+              link.classList.remove("active");
+            });
+            link.classList.add("active");
+          });
+        });
+      });
+    </script>
 
     <!-- ============script========= -->
     <!-- =============jQuery========= -->
@@ -772,3 +836,4 @@
     <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>
+

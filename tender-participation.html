@@ -79,8 +79,11 @@
               <img src="/assets/images/icons/close.svg" alt="" />
             </div>
               <ul class="sidebar-list" id="side-menu">
-              <li>
-                <a href="/dashboard.html" class="d-flex align-items-center gap-2">
+              <li class="sidebar-link">
+                <a
+                  href="/dashboard.html"
+                  class=" d-flex align-items-center gap-2"
+                >
                   <svg
                     width="36"
                     height="36"
@@ -100,8 +103,11 @@
                   <span key="t-dashboards">Dashboards</span>
                 </a>
               </li>
-              <li>
-                <a href="/tender-participation.html" class="d-flex align-items-center gap-2">
+              <li class="sidebar-link">
+                <a
+                  href="/tender-participation.html"
+                  class="d-flex align-items-center gap-2"
+                >
                   <svg
                     width="36"
                     height="36"
@@ -118,8 +124,11 @@
                   <span key="t-dashboards">Tender Participation</span>
                 </a>
               </li>
-              <li>
-                <a href="/user-mangement.html" class="d-flex align-items-center gap-2">
+              <li class="sidebar-link">
+                <a
+                  href="/user-mangement.html"
+                  class="d-flex  align-items-center gap-2"
+                >
                   <svg
                     width="36"
                     height="36"
@@ -266,15 +275,43 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarLinks = document.querySelectorAll(".sidebar-link a");
+        const setActiveLink = () => {
+          const currentPath = window.location.pathname;
+          sidebarLinks.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+            if (currentPath === linkPath) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        };
+        setActiveLink();
+        sidebarLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            sidebarLinks.forEach((link) => {
+              link.classList.remove("active");
+            });
+            link.classList.add("active");
+          });
+        });
+      });
+    </script>
 
     <!-- ============script========= -->
     <!-- =============jQuery========= -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- ===============bootstrap=========== -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
     <!-- =============custom js========= -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>

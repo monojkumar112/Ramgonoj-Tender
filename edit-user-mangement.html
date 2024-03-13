@@ -79,7 +79,7 @@
             <div class="sidebar-close-menu">
               <img src="/assets/images/icons/close.svg" alt="" />
             </div>
-           <ul class="sidebar-list" id="side-menu">
+       <ul class="sidebar-list" id="side-menu">
               <li class="sidebar-link">
                 <a
                   href="/dashboard.html"
@@ -449,7 +449,6 @@
                 <h2 class="table-text-list">Documents</h2>
 
                 <div class="user-mangement-table-item">
-                 
                   <div class="table-responsive">
                     <table class="table table-hover">
                       <thead class="tender-table-header">
@@ -516,17 +515,69 @@
                   </div>
                 </div>
               </div>
+              <div class="live-table-wrapper">
+                <h2 class="table-text-list">Activity History</h2>
+
+                <div class="user-mangement-table-item">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead class="tender-table-header">
+                        <tr>
+                          <th scope="col">Action Taken</th>
+                          <th scope="col">Action Taken By</th>
+                          <th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tender-table-body">
+                        <tr>
+                          <td>Approved</td>
+
+                          <td>
+                            [00155989] - Md. Reazul Amin - [Deputy Manager,
+                            Procurement]
+                          </td>
+
+                          <td>
+                           05/06/2023 11:00 AM
+                          </td>
+                     
+                        </tr>
+                        <tr>
+                          <td>
+                     Submit
+                          </td>
+                          <td>
+                          Women in Digital Bangladesh
+                          </td>
+
+                          <td>
+                          05/06/2023 11:00 AM
+                          </td>
+
+                        
+                        </tr>
+                        <tr>
+                          <td>Comments</td>
+                          <td>Our Tax Zone is 1. But in options, we could not able to add a new one. For that we select Tax Zone-5.</td>
+                          <td > 05/06/2023 11:00 AM</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+               
+                </div>
+              </div>
 
               <div class="participate-btn">
-                <button class="custom-btn mt-4">Update</button>
-                <button class="custom-btn tender-close-btn mt-3">Close</button>
+                <button class="custom-btn mt-4">Edit</button>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <script>
+
+      <script>
       document.addEventListener("DOMContentLoaded", function () {
         const sidebarLinks = document.querySelectorAll(".sidebar-link a");
         const setActiveLink = () => {
@@ -566,4 +617,3 @@
     <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>
-

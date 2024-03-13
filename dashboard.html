@@ -80,8 +80,11 @@
               <img src="/assets/images/icons/close.svg" alt="" />
             </div>
             <ul class="sidebar-list" id="side-menu">
-              <li>
-                <a href="/dashboard.html" class="d-flex align-items-center gap-2">
+              <li class="sidebar-link">
+                <a
+                  href="/dashboard.html"
+                  class="d-flex align-items-center gap-2"
+                >
                   <svg
                     width="36"
                     height="36"
@@ -101,8 +104,11 @@
                   <span key="t-dashboards">Dashboards</span>
                 </a>
               </li>
-              <li>
-                <a href="/tender-participation.html" class="d-flex align-items-center gap-2">
+              <li class="sidebar-link">
+                <a
+                  href="/tender-participation.html"
+                  class="d-flex align-items-center gap-2"
+                >
                   <svg
                     width="36"
                     height="36"
@@ -119,8 +125,11 @@
                   <span key="t-dashboards">Tender Participation</span>
                 </a>
               </li>
-              <li>
-                <a href="/user-mangement.html" class="d-flex align-items-center gap-2">
+              <li class="sidebar-link">
+                <a
+                  href="/user-mangement.html"
+                  class="d-flex align-items-center gap-2"
+                >
                   <svg
                     width="36"
                     height="36"
@@ -452,7 +461,7 @@
                     role="tabpanel"
                     aria-labelledby="participated-tender-tab"
                   >
-                     <div class="featured-tenders-section-wrapper">
+                    <div class="featured-tenders-section-wrapper">
                       <div class="featured-tenders-section-content">
                         <div
                           class="featured-tenders-header d-flex align-items-center justify-content-between"
@@ -644,6 +653,32 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarLinks = document.querySelectorAll(".sidebar-link a");
+        const setActiveLink = () => {
+          const currentPath = window.location.pathname;
+          sidebarLinks.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+            if (currentPath === linkPath) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        };
+        setActiveLink();
+        sidebarLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            sidebarLinks.forEach((link) => {
+              link.classList.remove("active");
+            });
+            link.classList.add("active");
+          });
+        });
+      });
+    </script>
 
     <!-- ============script========= -->
     <!-- =============jQuery========= -->
