@@ -9,7 +9,7 @@
   /* Add any other styling you need for your header */
 }
 #page-topbar {
-  z-index: 1;
+  z-index: 2;
   background-color: var(--main-color);
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
 }
