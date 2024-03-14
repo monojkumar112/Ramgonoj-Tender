@@ -1730,9 +1730,10 @@ form.signup-form h2 {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  background: url("../img/eye-icon.png") center/contain no-repeat;
+  background: url('../img/eye-close.png') center/contain no-repeat; /* Initial close eye icon */
   background-color: #ffffff;
 }
+
 
 .confirm-password-container {
   position: relative;
@@ -1746,6 +1747,6 @@ form.signup-form h2 {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  background: url("../img/eye-icon.png") center/contain no-repeat;
+  background: url('../img/eye-close.png') center/contain no-repeat; 
   background-color: #ffffff;
 }

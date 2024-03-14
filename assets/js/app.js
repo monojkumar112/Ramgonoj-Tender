@@ -88,22 +88,49 @@ telInput.blur(function () {
 // on keyup / change flag: reset
 telInput.on("keyup change", reset);
 
+// function togglePasswordVisibility() {
+//   var passwordInput = document.getElementById("password");
+
+//   if (passwordInput.type === "password") {
+//     passwordInput.type = "text";
+//   } else {
+//     passwordInput.type = "password";
+//   }
+// }
+
+// function toggleConfirmPasswordVisibility() {
+//   var confirmPasswordInput = document.getElementById("confirm-password");
+
+//   if (confirmPasswordInput.type === "password") {
+//     confirmPasswordInput.type = "text";
+//   } else {
+//     confirmPasswordInput.type = "password";
+//   }
+// }
+
 function togglePasswordVisibility() {
   var passwordInput = document.getElementById("password");
+  var togglePassword = document.querySelector(".toggle-password");
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
+    togglePassword.style.backgroundImage = "url('assets/img/eye-icon.png')";
   } else {
     passwordInput.type = "password";
+    togglePassword.style.backgroundImage = "url('assets/img/eye-close.png')";
   }
 }
 
+
 function toggleConfirmPasswordVisibility() {
   var confirmPasswordInput = document.getElementById("confirm-password");
+  var toggleConfirmPassword = document.querySelector(".toggle-confirm-password");
 
   if (confirmPasswordInput.type === "password") {
     confirmPasswordInput.type = "text";
+    toggleConfirmPassword.style.backgroundImage = "url('assets/img/eye-icon.png')";
   } else {
     confirmPasswordInput.type = "password";
+    toggleConfirmPassword.style.backgroundImage = "url('assets/img/eye-close.png')";
   }
 }
