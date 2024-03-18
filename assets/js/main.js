@@ -19,9 +19,26 @@ document
      header.classList.remove("sticky-header");
    }
  }
+  
+
 
  // Listen for the scroll event and call handleScroll function
  window.addEventListener("scroll", handleScroll);
+
+ const header2 = document.getElementById("home-topbar");
+
+ // Function to add a 'sticky' class to the header when user scrolls down, and remove it when scrolls back up
+ function handleScroll2() {
+   console.log("Scrolling detected"); // Check if this log appears in the console
+   if (window.scrollY > header.offsetTop) {
+     header.classList.add("sticky-header");
+   } else {
+     header.classList.remove("sticky-header");
+   }
+ }
+
+ // Listen for the scroll event and call handleScroll function
+ window.addEventListener("scroll", handleScroll2);
 
 // Get the table
 var table = document.querySelector(".table");

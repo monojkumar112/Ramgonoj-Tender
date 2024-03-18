@@ -2,8 +2,8 @@
 .sticky-header {
   position: fixed;
   top: 0;
-  background-color: #fff; /* Set your desired background color */
-  z-index: 1000; /* Ensure the header appears above other content */
+  /* background-color: #fff; */ /* Set your desired background color */
+  z-index: 2; /* Ensure the header appears above other content */
   border-bottom: 1px solid #ccc; /* Optional: Add a border if desired */
   width: 100%; /* Ensure the header spans the full width of the viewport */
   /* Add any other styling you need for your header */
