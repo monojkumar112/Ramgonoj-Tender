@@ -1,0 +1,36 @@
+
+.main-content-1 {
+    padding: 50px 0px;
+    width: 100%;
+}
+
+.award-table table tbody {
+    border: none; 
+}
+
+.award-table table tbody tr td:first-child {
+    border-right: none; 
+}
+
+.award-table table tbody tr td:last-child {
+    border-left: none;
+}
+
+.award-table thead th {
+    background-color: var(--main-color); 
+    color: var(--white-color); 
+    text-align: left;
+}
+
+.award-head-text {
+    font-size: var(--p-font);
+    color: var(--ash-color);
+}
+
+.award-para-text {
+    font-size: 14px;
+}
+
+.award-gap {
+    margin: 10px 0;
+}
