@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/signup.css" />
     <link rel="stylesheet" href="assets/css/login.css" />
     <link rel="stylesheet" href="assets/css/dashboard.css" />
+    <link rel="stylesheet" href="assets/css/main-content.css" />
     <!-- ======================responsive============ -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
@@ -43,7 +44,7 @@
             >
               <a href="#" class="social-list d-flex align-items-center gap-2">
                 <img src="/assets/images/icons/email.svg" alt="" />
-                <span>tendar@ramgunjpouroshova.com </span>
+                <span>tender@ramgonjpouroshova.com </span>
               </a>
               <a href="#" class="social-list d-flex align-items-center gap-2">
                 <img src="/assets/images/icons/number.svg" alt="" />
@@ -57,7 +58,8 @@
                 <img src="/assets/images/icons/notifaction.svg" alt="" />
                 <span class="dashboard-count">1</span>
               </div>
-              <a href="/user-mangement.html" class="dashboard-profile-user">
+
+              <a href="#" class="dashboard-profile-user" onclick="toggleMenu()">
                 <img
                   class="user-img"
                   src="/assets/images/icons/wid.svg"
@@ -66,6 +68,28 @@
                 <p>WOMEN IN DIGITAL</p>
                 <img src="/assets/images/icons/arrow.svg" alt="" />
               </a>
+              <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                  <div class="user-info">
+                    <img src="assets/dropdown-images/user.png" alt="User Image"/>
+                    <h4>User Name</h4>
+                  </div>
+                  <hr>
+                  <a href="/user-mangement.html" class="sub-menu-link">
+                    <img src="/assets/dropdown-images/profile.png" alt="">
+                    <p>Edit Profile</p>
+                  </a>
+                  <a href="/change-password.html" class="sub-menu-link">
+                    <img src="/assets/dropdown-images/password.svg" alt="" style="padding: 10px;">
+                    <p>Change Password</p>
+                  </a>
+                  <a href="/" class="sub-menu-link">
+                    <img src="/assets/dropdown-images/logout.png" alt="" onclick="logout()">
+                    <p>Logout</p>
+                  </a>
+                </div>
+              </div>
+
               <div class="header-menu">
                 <img src="/assets/images/icons/menu.svg" alt="" />
               </div>
@@ -615,5 +639,14 @@
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+    <script>
+      let subMenu = document.getElementById("subMenu");
+      function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+      }
+
+      function logout() { 
+        pagewindow.location = '/'; } 
+    </script>
   </body>
 </html>

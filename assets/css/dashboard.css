@@ -543,3 +543,63 @@ table.tab-sf td {
 .btn-main-color {
   background-color: #004382;
 }
+
+/* dropdown */
+.sub-menu-wrap{
+  position:absolute;
+  top:15%;
+  right:2%;
+  width:320px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s;
+  z-index: 100;
+}
+.sub-menu-wrap.open-menu{
+  max-height: 400px;
+}
+.sub-menu{
+  background: #F5F5F5;
+  padding: 20px;
+  margin: 10px;
+}
+.user-info{
+  display: flex;
+  align-items: center;
+}
+.user-info h3{
+  font-weight: 500;
+}
+.user-info img{
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.sub-menu hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #fd8d04;
+  margin: 15px 0 10px;
+}
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #616161;
+  margin: 12px 0;
+}
+
+.sub-menu-link p{
+  width:100%;
+}
+.sub-menu-link:hover p{
+  font-weight: 600;
+}
+.sub-menu-link img{
+  width: 50px;
+  background: #e5e5e5
+  border-radius:50%;
+  padding:8px;
+  margin-right:15px;
+}
